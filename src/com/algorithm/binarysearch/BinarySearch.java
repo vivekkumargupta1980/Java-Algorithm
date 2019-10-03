@@ -20,14 +20,14 @@ public class BinarySearch {
 
 		while (high >= low) {
 			int mid = (low + high) / 2;
-			if (data[mid] == key) {
+			if (key == data[mid]) {
 				return true;
 			}
-			if (data[mid] < key) {
-				low = mid + 1;
-			}
-			if (data[mid] > key) {
+			if (key < data[mid]) {
 				high = mid - 1;
+			}
+			if (key > data[mid]) {
+				low = mid  + 1;
 			}
 		}
 		return false;
